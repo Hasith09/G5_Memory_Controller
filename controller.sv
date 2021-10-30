@@ -17,7 +17,7 @@ if($value$plusargs("tracefile=%s", filename))
 			end
 			else
 			begin
-			while(!$feo(file))
+				while(!$feof(file))
 			begin
 				$fgets(scan_input,file);
 				$sscanf(scan_input,"%d %d %h",cycle_time,operation,address);
