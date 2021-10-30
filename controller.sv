@@ -1,9 +1,9 @@
 module controller_tb;
 
 int file,cycle_time;
-string filename, scan_input;
+string filename, input_line;
 logic [1:0] operation;
-logic [36:0] address;
+	logic [36:0] hex_address;
 
 initial
 begin
@@ -19,9 +19,9 @@ if($value$plusargs("tracefile=%s", filename))
 			begin
 				while(!$feof(file))
 			begin
-				$fgets(scan_input,file);
-				$sscanf(scan_input,"%d %d %h",cycle_time,operation,address);
-				$display("%d %d %h",cycle_time,operation,address);
+				$fgets(input_line,file);
+				$sscanf(input_line,"%d %d %h",cycle_time,operation,hex_address);
+				$display("%d %d %h",cycle_time,operation,hex_address);
 			end
 			end
 end
