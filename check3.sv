@@ -57,7 +57,7 @@ always @(posedge clk)
 begin
 	for (int i=0; i <16;i++)
 	begin
-		if(countarray[i]+100==$time)
+		if(countarray[i]+1000==$time)
 		begin
 			pop_element= queue.pop_front();
 			$display("time at the element %s popped out is %0t",pop_element,$time);
