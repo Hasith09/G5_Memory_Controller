@@ -10,7 +10,7 @@ always  #5 clk=!clk;
 initial begin 
 clk=5;
 
-#2000;
+#3000;
 $stop;
 
 end
